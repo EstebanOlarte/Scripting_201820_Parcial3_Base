@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 
     private float gameTime = 25F;
 
+
     public float CurrentGameTime { get; private set; }
 
     // Use this for initialization
@@ -30,5 +31,6 @@ public class GameController : MonoBehaviour
         {
             //TODO: Send GameOver event.
         }
+    
     }
 }

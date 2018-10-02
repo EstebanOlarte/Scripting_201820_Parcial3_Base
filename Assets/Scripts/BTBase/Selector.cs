@@ -1,10 +1,10 @@
 ﻿public class Selector : Composite
 {
-    protected override bool MustAllChildrenSucceed
+    protected override bool MustAllChildrenSucceed 
     {
         get
         {
-            return false;
+            return true;
         }
     }
 
@@ -14,7 +14,15 @@
 
         if (result)
         {
-            result = base.Execute();
+            foreach (Node node in children)
+            {
+                result = result || node.Execute();
+
+                if (ShouldBreak(result))
+                {
+                    break;
+                }
+            }
         }
 
         return result;
