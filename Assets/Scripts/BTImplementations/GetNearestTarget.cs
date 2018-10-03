@@ -1,16 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿
 
-public class GetNearestTarget : MonoBehaviour {
+public class GetNearestTarget :Task {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public override bool Execute()
+    {
+        print("buscaré a quien agarrar");
+        return base.Execute();
+    }
 }

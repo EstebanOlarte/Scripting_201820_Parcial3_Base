@@ -7,7 +7,7 @@ public abstract class ActorController : MonoBehaviour
 {
     protected NavMeshAgent agent;
 
-    [SerializeField]
+
     protected Color baseColor = Color.blue;
 
     protected Color taggedColor = Color.red;

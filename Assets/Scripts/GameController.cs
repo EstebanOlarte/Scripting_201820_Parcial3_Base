@@ -5,14 +5,34 @@ public class GameController : MonoBehaviour
 {
     private ActorController[] players;
 
-    private float gameTime = 25F;
+    [SerializeField]
+    int nPlayers;
 
+    [SerializeField]
+    GameObject ia;
+
+    [SerializeField]
+    GameObject parentPoints;
+
+    Transform[] points;
+
+    [SerializeField]
+    private float gameTime = 25F;
 
     public float CurrentGameTime { get; private set; }
 
     // Use this for initialization
     private IEnumerator Start()
     {
+        nPlayers = Mathf.Clamp(nPlayers, 3, 5);
+
+        points = parentPoints.GetComponentsInChildren<Transform>();
+
+        for (int i = 0; i < nPlayers-1; i++)
+        {
+            Instantiate(ia, points[i + 1].position, Quaternion.identity);
+        }
+
         CurrentGameTime = gameTime;
 
         // Sets the first random tagged player
@@ -31,6 +51,5 @@ public class GameController : MonoBehaviour
         {
             //TODO: Send GameOver event.
         }
-    
     }
 }

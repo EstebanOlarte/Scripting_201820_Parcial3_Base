@@ -19,7 +19,6 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         //TODO: Set text from GameController
-        timerText.text = GameObject.Find("Main Camera").GetComponent<GameController>().CurrentGameTime.ToString("F3");
-
+        timerText.text = GetComponent<GameController>().CurrentGameTime.ToString("F2");
     }
 }

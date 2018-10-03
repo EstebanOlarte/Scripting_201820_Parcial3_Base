@@ -18,10 +18,12 @@ public class AIController : ActorController
     {
         base.Start();
 
-        if (btRootNode != null)
+        btRootNode.Execute();
+
+        /*if (btRootNode != null)
         {
             btRootNode.SetControlledAI(this);
-        }
+        }*/
 
         AIMoveTest.Instance.onAIMoveIssued += MoveAI;
     }

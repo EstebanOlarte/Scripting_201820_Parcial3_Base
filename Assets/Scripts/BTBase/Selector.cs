@@ -1,22 +1,27 @@
 ﻿public class Selector : Composite
 {
-    protected override bool MustAllChildrenSucceed 
+    protected override bool MustAllChildrenSucceed
     {
         get
         {
-            return true;
+            return false;
         }
     }
 
     public override bool Execute()
     {
-        bool result = CheckCondition();
+        bool result = false;
+        int childCount = 0;
 
-        if (result)
+        if (CheckCondition())
         {
             foreach (Node node in children)
             {
                 result = result || node.Execute();
+
+                print(string.Format("Executed selector child {0} with result {1}", childCount, result));
+
+                childCount += 1;
 
                 if (ShouldBreak(result))
                 {

@@ -4,6 +4,7 @@
 
     protected override bool ShouldBreak(bool result)
     {
+        print("entré");
         return !result;
     }
 }
