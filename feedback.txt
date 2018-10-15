@@ -1,0 +1,16 @@
+Feedback
+
+Examen (1.2/5.0)
+ * El AI parece no moverse.
+ * El contador del tiempo pasa a negativo...
+ * Al usar el ExampleSelector como condición de éxito se hace que el árbol no se comporte como se espera. Se debía usar un Selector base.
+ * BT (0.2 / 1.8)
+	* ActorIsTagged siempre devuelve true. Por qué?
+	* FleeFromTarget, FollowTarget, GetNearestTarget, IsTaggedActorNear, StopMovement no implementados.
+ * La cantidad de jugadores y el tiempo de juego sí se configuran desde el GameController (1.0)
+
+Bonificación (0.0/0.5)
+
+Compensación : 1.0
+
+Total: 2.2 / 5.0
